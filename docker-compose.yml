@@ -3,6 +3,7 @@ version: '1'
 services:
   front-end:
     image: pievit/front-end
+    network_mode: bridge
     stdin_open: true
     tty: true
     build:
