@@ -8,7 +8,7 @@ ENV NODE_ENV=development
 
 RUN apk add --no-cache curl
 #RUN curl -L https://www.npmjs.com/install.sh | sh
-RUN npm install -g ; npm i vite
+RUN npm install -clear
 #RUN npm install --clear
 
 
