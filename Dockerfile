@@ -6,7 +6,7 @@ COPY ./package*.json ./
 
 ENV NODE_ENV=development
 
-RUN npm install -g
+RUN npm install -g ; npm i vite
 
 
 EXPOSE 8080
