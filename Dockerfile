@@ -7,10 +7,12 @@ COPY ./package*.json ./
 ENV NODE_ENV=development
 
 RUN apk add --no-cache curl
-RUN apk add --update nodejs-current npm
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs
+RUN #apk add --update nodejs-current npm
 #RUN curl -L https://www.npmjs.com/install.sh | sh
 #RUN npm install -g ; npm i vite
-RUN npm install --clear; npm i vite
+RUN npm install --clear
 
 
 EXPOSE 8080
