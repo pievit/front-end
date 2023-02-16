@@ -9,4 +9,4 @@ services:
       context: .
     container_name: front-end
     ports:
-      - "8080:8080"
+      - "8083:8080"
