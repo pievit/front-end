@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  front-end:
+    image: pievit/front-end
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+    container_name: front-end
+    ports:
+      - "8080:8080"
