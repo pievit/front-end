@@ -7,7 +7,8 @@ COPY ./package*.json ./
 ENV NODE_ENV=development
 
 RUN apk add --no-cache curl
-RUN apk add --update nodejs-current
+RUN apk add --update nodejs-current npm
+RUN node -v
 RUN curl -L https://www.npmjs.com/install.sh | sh
 RUN npm -v
 RUN npm install -g ; npm i vite
