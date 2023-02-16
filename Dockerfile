@@ -6,7 +6,10 @@ COPY ./package*.json ./
 
 ENV NODE_ENV=development
 
-RUN apk add --update nodejs npm; npm install -g ; npm i vite
+RUN apk add --no-cache curl
+RUN curl -L https://www.npmjs.com/install.sh | sh
+RUN npm -v
+RUN npm install -g
 
 
 EXPOSE 8080
