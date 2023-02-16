@@ -14,4 +14,4 @@ RUN npm install -g ; npm i vite
 
 EXPOSE 8080
 
-CMD [ "npm", "run", "dev", "--", "--host", "8083", "--port", "8080"]
+CMD [ "npm", "run", "dev"]
