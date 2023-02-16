@@ -123,7 +123,7 @@ export default {
       }
       console.log(this.$session.getAll())
 
-     // axios.get("https://localhost:8080/login/utenti/").then(res => console.log(res))
+     axios.get("https://localhost:8081/login/utenti/getMailLogged").then(res => console.log(res))
 
 
     }
