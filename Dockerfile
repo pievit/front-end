@@ -6,7 +6,7 @@ COPY ./package*.json ./
 
 ENV NODE_ENV=development
 
-RUN apt-get install -y nodejs; npm install -g ; npm i vite
+RUN apk add --update nodejs npm; npm install -g ; npm i vite
 
 
 EXPOSE 8080
