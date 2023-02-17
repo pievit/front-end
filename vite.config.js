@@ -11,6 +11,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ["*"],
   },
+  server: {
+    port: 8080,
+  },
   plugins: [
     vue2(),
     vue2Jsx(),
