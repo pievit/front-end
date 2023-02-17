@@ -2,8 +2,9 @@
   "name": "front-end",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --port 8080 --host 0.0.0.0",
-    "build": "vite build",
+    "dev": "vite --port 8080",
+    "serve": "vue-cli-service serve",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "preview": "vite preview --port 4173",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
