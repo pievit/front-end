@@ -12,6 +12,5 @@ RUN npm install -clear
 #RUN npm install --clear
 
 
-EXPOSE 8080
 
 CMD [ "npm", "run", "dev"]
