@@ -11,10 +11,9 @@
         </div>
 
         <div align="center">
-          <b-btn pill variant="success" to="/login/utenti/loginCliente">Login Cliente</b-btn>
+          <b-btn pill variant="success" href="/login/utenti/loginCliente">Login Cliente</b-btn>
           <br /><br />
-          <b-btn pill variant="primary" to="/login/utenti/loginTassista"
-            >Login Tassista</b-btn>
+          <b-btn pill variant="primary" href="/login/utenti/loginTassista">Login Tassista</b-btn>
         </div>
       </div>
       <div class="col-4"></div>
