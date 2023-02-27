@@ -11,8 +11,6 @@ RUN npm install -g
 
 COPY . .
 
-RUN npm run dev
-
 EXPOSE 8080
 
 
