@@ -2,7 +2,7 @@
   "name": "front-end",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --port 8080",
+    "dev": "vite --port 8080 --host",
     "serve": "vue-cli-service serve",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "preview": "vite preview --port 4173",
