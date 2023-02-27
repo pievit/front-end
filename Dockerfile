@@ -1,4 +1,4 @@
-FROM node:18.8.0-alpine
+FROM node:lts-alpine
 
 WORKDIR /app
 
@@ -8,6 +8,10 @@ ENV NODE_ENV=development
 
 RUN apk add --no-cache curl
 RUN npm install -g
+
+COPY . .
+
+RUN npm run dev
 
 EXPOSE 8080
 
