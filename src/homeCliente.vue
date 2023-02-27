@@ -5,7 +5,7 @@
         header="Benvenuto in Autto"
         bg-variant="light"
         border-variant="dark"
-        lead="email cliente"
+        lead= "this.$session.get('email')"
         rounded
       >
         <br />
