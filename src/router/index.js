@@ -51,7 +51,7 @@ router.beforeEach((to, from, next) => {
       if (to.params.email !== null && response.toString() === to.params.email) {
         next(to.params);
       } else {
-        console.log(response);
+        console.warn(response)
         next({ name: to.name, params: { email: response.toString() } });
       }
     });
