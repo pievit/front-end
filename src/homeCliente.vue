@@ -7,7 +7,7 @@
         header="Benvenuto in Autto"
         bg-variant="light"
         border-variant="dark"
-        lead= "{{email}}"
+        :lead= "email"
         rounded
       >
         <br />
