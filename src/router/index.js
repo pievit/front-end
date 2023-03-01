@@ -49,8 +49,9 @@ router.beforeEach((to, from, next) => {
   } else {
     axios.get("/login/utenti/getMailLogged").then((response) => {
       if (to.params.email !== null && response.toString() === to.params.email) {
-        next();
+        next(to.params);
       } else {
+        console.log(response);
         next({ name: to.name, params: { email: response.toString() } });
       }
     });
