@@ -6,7 +6,6 @@ import prenotazioniCliente from "@/prenotazioniCliente.vue";
 import nuovaPrenotazione from "@/nuovaPrenotazione.vue";
 import axios from "axios";
 
-
 Vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -37,27 +36,30 @@ const router = new VueRouter({
       component: prenotazioniCliente,
     },
     {
-      path:"/nuovaPrenotazione",
+      path: "/nuovaPrenotazione",
       name: "nuovaPrenotazione",
       component: nuovaPrenotazione,
     },
   ],
 });
 
-router.beforeEach((to, from ,next ) => {
-  if(to.name === "home"){
+router.beforeEach((to, from, next) => {
+  if (to.name === "home") {
     next();
-  }else{
-    axios
-      .get('/login/utenti/getMailLogged')
-      .then(response => {
-      to.params.email = response.toString();
-      next(to.params);
-      })
+  } else {
+    to.params.email = async () => {
+      // eslint-disable-next-line no-unused-vars
+      const response = await axios.get("/login/utenti/getMailLogged");
+    };
+    next(to.params);
 
-
+    // axios
+    //   .get('/login/utenti/getMailLogged')
+    //   .then(response => {
+    //     to.params.email = response.toString();
+    //     next(to.params);
+    //   })
   }
-
 });
 
 export default router;
