@@ -1,11 +1,13 @@
 <template>
   <div class="container-sm">
     <div class="row" align="center">
+      <input type="hidden" id="emailsession" value="${sessionScope.email}"/>
       <b-jumbotron
+        id="jumbo"
         header="Benvenuto in Autto"
         bg-variant="light"
         border-variant="dark"
-        lead= "this.$session.get('email')"
+        lead= "email"
         rounded
       >
         <br />
@@ -34,7 +36,12 @@ export default {
 
 };
 
-var email = this.$session.get('email')
+var email = document.getElementById("emailsession").value
+
+var jumbo = document.getElementById("jumbo")
+
+jumbo.setAttribute("lead",email)
+
 </script>
 
 <style scoped></style>
