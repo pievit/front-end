@@ -50,7 +50,7 @@ router.beforeEach((to, from, next) => {
     axios
       .get('/login/utenti/getMailLogged')
       .then(response => {
-        to.params.email = response.toString();
+        to.params.email = ""+response.toString();
         next(to.params);
       })
 
