@@ -1,7 +1,6 @@
 <template>
   <div class="container-sm">
     <div class="row" align="center">
-      <input type="hidden" id="emailsession" value="${sessionScope.email}"/>
       <b-jumbotron
         id="jumbo"
         header="Benvenuto in Autto"
@@ -35,7 +34,7 @@ export default {
   name: "homeCliente",
   data() {
     return {
-      email: this.$route.params
+      email: this.$route.params.toString()
     }
   }
 
