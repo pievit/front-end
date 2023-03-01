@@ -33,6 +33,8 @@ export default {
   name: "homeCliente",
 
 };
+
+var email = this.$session.get('email')
 </script>
 
 <style scoped></style>
