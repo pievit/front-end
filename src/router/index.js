@@ -44,7 +44,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from ,next ) => {
-  if(to == "/"){
+  if(to.name === "/"){
     next();
   }else{
     // eslint-disable-next-line no-undef,no-unused-vars
