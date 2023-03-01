@@ -33,6 +33,11 @@
 <script>
 export default {
   name: "homeCliente",
+  data() {
+    return {
+      email: ''
+    }
+  }
 
 };
 
