@@ -36,14 +36,6 @@ export default {
 
 };
 
-// eslint-disable-next-line no-undef
-$( document ).ready(function() {
-  var email = document.getElementById("emailsession").value
-
-  var jumbo = document.getElementById("jumbo")
-
-  jumbo.setAttribute("lead",email)
-});
 
 
 </script>
