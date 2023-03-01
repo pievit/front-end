@@ -34,7 +34,7 @@ export default {
   name: "homeCliente",
   data() {
     return {
-      email: this.$route.params.toString()
+      email: this.email
     }
   }
 
