@@ -36,11 +36,15 @@ export default {
 
 };
 
-var email = document.getElementById("emailsession").value
+// eslint-disable-next-line no-undef
+$( document ).ready(function() {
+  var email = document.getElementById("emailsession").value
 
-var jumbo = document.getElementById("jumbo")
+  var jumbo = document.getElementById("jumbo")
 
-jumbo.setAttribute("lead",email)
+  jumbo.setAttribute("lead",email)
+});
+
 
 </script>
 
