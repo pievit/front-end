@@ -44,10 +44,15 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from ,next ) => {
-  // eslint-disable-next-line no-undef,no-unused-vars
-  $.get("/login/utenti/getMailLogged", function(data, status){
+  if(to == "/"){
+    next();
+  }else{
+    // eslint-disable-next-line no-undef,no-unused-vars
+    $.get("/login/utenti/getMailLogged", function(data, status){
       next(data);
-  });
+    });
+  }
+
 });
 
 export default router;
