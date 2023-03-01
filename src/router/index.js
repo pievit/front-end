@@ -51,6 +51,7 @@ router.beforeEach((to, from ,next ) => {
     axios
       .get('/login/utenti/getMailLogged')
       .then(response => (this.email = response))
+    next();
   }
 
 });
