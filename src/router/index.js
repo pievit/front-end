@@ -4,6 +4,7 @@ import HomeView from "../views/HomeView.vue";
 import homeCliente from "@/homeCliente.vue";
 import prenotazioniCliente from "@/prenotazioniCliente.vue";
 import nuovaPrenotazione from "@/nuovaPrenotazione.vue";
+import axios from "axios";
 
 
 Vue.use(VueRouter);
@@ -47,10 +48,9 @@ router.beforeEach((to, from ,next ) => {
   if(to.name === "home"){
     next();
   }else{
-    // eslint-disable-next-line no-undef,no-unused-vars
-    $.get("/login/utenti/getMailLogged", function(data, status){
-      next(data);
-    });
+    axios
+      .get('/login/utenti/getMailLogged')
+      .then(response => (this.email = response))
   }
 
 });
