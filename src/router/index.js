@@ -47,13 +47,13 @@ router.beforeEach((to, from, next) => {
   if (to.name === "home") {
     next();
   } else {
-    axios
-      .get('/login/utenti/getMailLogged')
-      .then(response => {
-        // to.params.email = ""+response.toString();
-        next({name: to.name, params: { email : response.toString()}});
-      })
-
+    axios.get("/login/utenti/getMailLogged").then((response) => {
+      if (to.params.email !== null && response.toString() === to.params.email) {
+        next();
+      } else {
+        next({ name: to.name, params: { email: response.toString() } });
+      }
+    });
   }
 });
 
