@@ -47,10 +47,11 @@ router.beforeEach((to, from, next) => {
   if (to.name === "home") {
     next();
   } else {
-    to.params.email = async () => {
+    const getData = async () => {
       // eslint-disable-next-line no-unused-vars
-      const response = await axios.get("/login/utenti/getMailLogged");
+      const response = await axios.get(`/login/utenti/getMailLogged`);
     };
+    to.params.email = getData;
     next(to.params);
 
     // axios
