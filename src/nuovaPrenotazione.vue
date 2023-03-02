@@ -57,7 +57,7 @@
       <div class="row">
         <div class="col-2">
           <select id="metodopag" v-model="metodopag" class="form-control">
-            <option value="contanti">Contanti</option>
+            <option value="contanti" selected>Contanti</option>
             <option value="carta">Carta</option>
           </select>
         </div>
@@ -121,9 +121,7 @@ export default {
           o++
         }
       }
-      console.log(this.$session.getAll())
 
-     axios.get("https://localhost:8081/login/utenti/getMailLogged").then(res => console.log(res))
 
 
     }
