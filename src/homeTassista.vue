@@ -31,7 +31,12 @@
 
 <script>
 export default {
-  name: "homeTassista"
+  name: "homeTassista",
+  data() {
+    return {
+      email: this.$route.params.email.toString()
+    }
+  }
 };
 </script>
 
