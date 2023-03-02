@@ -12,7 +12,7 @@
         <br />
         <div class="row">
           <div class="col-6">
-            <b-button variant="info" to="/modificaDati"
+            <b-button variant="info" to="/modificaDatiTas"
             >Modifica Dati</b-button
             >
           </div>
