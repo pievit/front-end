@@ -70,10 +70,10 @@ router.beforeEach((to, from, next) => {
         if(to.name === "modificaDatiTas"){
             axios.get("/api/utenti/getAllInfoTassista/"+to.params.email).then((res) => {
               if(to.params.infoTas === null || res.data.toString() !== to.params.infoTas){
-                console.log(res.data.toString())
-                console.log(to.params.infoTas)
-                next({name: to.name, params: {infoTas : res.data.toString()}})
-              }else{
+                console.log(res.data.toString());
+                console.log(to.params.infoTas);
+                next({ name: to.name, params: { infoTas : res.data.toString() } });
+              } else {
                 next(to.params);
               }
             })
@@ -82,7 +82,11 @@ router.beforeEach((to, from, next) => {
           next(to.params);
         }
       } else {
-        next({ name: to.name, params: { email: response.data.toString() } });
+        if(to.params.infoTas === null){
+          next({ name: to.name, params: { email: response.data.toString() } });
+        }else{
+          next({ name: to.name, params: { email: response.data.toString() , infoTas: to.params.infoTas} });
+        }
       }
     });
   }
