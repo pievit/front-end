@@ -90,7 +90,7 @@ export default {
     return {
       infoTas: this.$route.params.infoTas,
       npatente: "",
-      datascandenza: "",
+      datascadenza: "",
       targa: "",
       nposti: "",
       auto: "",
