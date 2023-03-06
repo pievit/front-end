@@ -69,7 +69,7 @@ router.beforeEach((to, from, next) => {
       if (to.params.email !== null && response.data.toString() === to.params.email) {
         if(to.name === "modificaDatiTas"){
             axios.get("/api/utenti/getAllInfoTassista/"+to.params.email).then((res) => {
-              if(to.params.infoTas === null && res.data.toString() !== to.params.infoTas){
+              if(to.params.infoTas === undefined && res.data.toString() !== to.params.infoTas){
                 console.log(res.data.toString())
                 next({name: to.name, params: {infoTas : res.data.toString()}})
               }else{
