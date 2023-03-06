@@ -72,8 +72,9 @@ router.beforeEach((to, from, next) => {
             console.log(res.data.toString())
             next({name: to.name, params: {infoTas : res.data.toString()}})
           })
+        }else{
+          next(to.params);
         }
-        next(to.params);
       } else {
         next({ name: to.name, params: { email: response.data.toString() } });
       }
