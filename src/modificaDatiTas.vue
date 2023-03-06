@@ -52,6 +52,15 @@
                 unchecked-value="false"
               > Seggiolino </b-form-checkbox>
             </div>
+
+            <div class="col-2">
+              <router-link
+                to="/modificaDisp"
+                custom
+                v-slot="{ changeDisp }"
+              >
+              <b-btn variant="outline-primary" type="button" role="link" @click="changeDisp">Modifica Disponibilità</b-btn>
+            </div>
           </div>
           <br>
 
@@ -88,6 +97,9 @@ export default {
   },
   methods: {
     salvaDatiTas(){
+
+    },
+    changeDisp(){
 
     }
   }

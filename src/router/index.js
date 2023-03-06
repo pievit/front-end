@@ -7,6 +7,7 @@ import nuovaPrenotazione from "@/nuovaPrenotazione.vue";
 import axios from "axios";
 import homeTassista from "@/homeTassista.vue";
 import modificaDatiTas from "@/modificaDatiTas.vue";
+import modificaDisp from "@/modificaDisp.vue";
 
 Vue.use(VueRouter);
 
@@ -51,6 +52,11 @@ const router = new VueRouter({
       path: "/modificaDatiTas",
       name: "modificaDatiTas",
       component: modificaDatiTas,
+    },
+    {
+      path: "/modificaDisp",
+      name: "modificaDisp",
+      component: modificaDisp,
     },
   ],
 });
