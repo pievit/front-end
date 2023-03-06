@@ -83,6 +83,7 @@
 </template>
 
 <script>
+
 export default {
   name: "modificaDatiTas",
   data: function(){
@@ -99,7 +100,7 @@ export default {
   },
   methods: {
     salvaDatiTas(){
-
+      console.log(this.datiTas[0])
     }
   }
 
