@@ -60,6 +60,7 @@
                 v-slot="{ changeDisp }"
               >
               <b-btn variant="outline-primary" type="button" role="link" @click="changeDisp">Modifica Disponibilità</b-btn>
+              </router-link>
             </div>
           </div>
           <br>
