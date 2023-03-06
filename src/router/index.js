@@ -68,8 +68,9 @@ router.beforeEach((to, from, next) => {
     axios.get("/login/utenti/getMailLogged").then((response) => {
       if (to.params.email !== null && response.data.toString() === to.params.email) {
         if(to.name === "modificaDatiTas"){
-          axios.get("/api/utenti/tassista/"+to.params.email).then((res) => {
+          axios.get("/api/utenti/getAllInfoTassista/"+to.params.email).then((res) => {
             console.log(res.data.toString())
+            next({name: to.name, params: {infoTas : res.data.toString()}})
           })
         }
         next(to.params);

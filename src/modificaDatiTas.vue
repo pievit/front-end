@@ -87,6 +87,7 @@ export default {
   name: "modificaDatiTas",
   data: function(){
     return {
+      datiTas: this.$route.params.datiTas,
       npatente: "",
       datascandenza: "",
       targa: "",
@@ -98,9 +99,6 @@ export default {
   },
   methods: {
     salvaDatiTas(){
-
-    },
-    changeDisp(){
 
     }
   }
