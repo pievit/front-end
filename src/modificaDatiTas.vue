@@ -88,7 +88,7 @@ export default {
   name: "modificaDatiTas",
   data: function(){
     return {
-      datiTas: this.$route.params.datiTas,
+      infoTas: this.$route.params.infoTas,
       npatente: "",
       datascandenza: "",
       targa: "",
@@ -100,7 +100,7 @@ export default {
   },
   methods: {
     salvaDatiTas(){
-      console.log(this.datiTas)
+      console.log(this.infoTas[0])
     }
   }
 
