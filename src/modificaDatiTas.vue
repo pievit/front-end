@@ -100,7 +100,7 @@ export default {
   },
   methods: {
     salvaDatiTas(){
-      console.log(this.infoTas[0])
+      console.log(this.infoTas)
     }
   }
 
