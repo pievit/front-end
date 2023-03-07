@@ -127,7 +127,11 @@ export default {
     salvaDatiTas(){
       var tassista = {email: this.email, nome: this.nome, cognome: this.cognome, npatente: this.npatente, datascadenza: this.datascadenza};
       var auto = {targa: this.targa, descrizione: this.auto, nposti: this.nposti, bagagliaio: this.bagagliaio, seggiolino: this.seggiolino, tassista: tassista};
-      axios.post("/api/utenti/salvaDatiTas", { tassista: tassista,automobie: auto }).then(response => console.log(response))
+      axios.post("/api/utenti/salvaDatiTas", { tassista: tassista,automobile: auto })
+        .then(response => console.log(response))
+        .catch(error => {
+          console.error("errore: ",error)
+        })
     }
   }
 
