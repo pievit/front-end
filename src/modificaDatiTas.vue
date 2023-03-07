@@ -88,16 +88,25 @@
 
 export default {
   name: "modificaDatiTas",
+  mounted(){
+    this.npatente = this.infoTas.split(",")[4]
+    this.datascadenza = this.infoTas.split(",")[5]
+    this.targa = this.infoTas.split(",")[6]
+    this.auto = this.infoTas.split(",")[7]
+    this.nposti = this.infoTas.split(",")[8]
+    this.seggiolino = this.infoTas.split(",")[9]
+    this.bagagliaio = this.infoTas.split(",")[10]
+  },
   data: function(){
     return {
       infoTas: this.$route.params.infoTas,
-      npatente: this.infoTas.split(",")[4],
-      datascadenza: this.infoTas.split(",")[5],
-      targa: this.infoTas.split(",")[6],
-      nposti: this.infoTas.split(",")[8],
-      auto: this.infoTas.split(",")[7],
-      seggiolino: this.infoTas.split(",")[9],
-      bagagliaio: this.infoTas.split(",")[10],
+      // npatente: this.infoTas.split(",")[4],
+      // datascadenza: this.infoTas.split(",")[5],
+      // targa: this.infoTas.split(",")[6],
+      // nposti: this.infoTas.split(",")[8],
+      // auto: this.infoTas.split(",")[7],
+      // seggiolino: this.infoTas.split(",")[9],
+      // bagagliaio: this.infoTas.split(",")[10],
     }
   },
   methods: {
