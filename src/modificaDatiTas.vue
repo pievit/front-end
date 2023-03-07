@@ -39,8 +39,8 @@
               <b-form-checkbox
                 id="bagagliaio"
                 name="bagagliaio"
-                :value="bagagliaio"
                 v-model="bagagliaio"
+                value="true"
                 unchecked-value="false"
               > Bagagliaio </b-form-checkbox>
             </div>
@@ -49,8 +49,8 @@
               <b-form-checkbox
                 id="seggiolino"
                 name="seggiolino"
-                :value="seggiolino"
                 v-model="seggiolino"
+                value="true"
                 unchecked-value="false"
               > Seggiolino </b-form-checkbox>
             </div>
@@ -97,12 +97,12 @@ export default {
     var info = i1.concat(i2)
 
     this.npatente = info[3]
-    this.datascadenza = info[4].replaceAll("/","-")
+    this.datascadenza = new Date(info[4].replaceAll("/","-"))
     this.targa = info[7]
     this.auto = info[8]
     this.nposti = info[9]
-    this.seggiolino =  ((info[10] == "true") ? 1 : 0)
-    this.bagagliaio = ((info[11] == "true") ? 1 : 0)
+    this.seggiolino =  info[10]
+    this.bagagliaio = info[11]
     console.log(this.datascadenza+" -- "+this.seggiolino+" -- "+this.bagagliaio)
   },
 
