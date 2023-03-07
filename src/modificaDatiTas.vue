@@ -12,25 +12,25 @@
         <form action="" method="post" align="center">
           <div class="row" >
             <div class="col-5">
-              <b-form-input v-model="npatente" name="npatente" id="npatente" placeholder="Codice patente:" required value="{{npatente}}"></b-form-input>
+              <b-form-input v-model="npatente" name="npatente" id="npatente" placeholder="Codice patente:" required :value="npatente"></b-form-input>
             </div>
             <div class="col-5">
-              <b-form-datepicker id="datascadenza" v-model="datascadenza" placeholder="Data scadenza Patente" required value="{{datascadenza}}"></b-form-datepicker>
+              <b-form-datepicker id="datascadenza" v-model="datascadenza" placeholder="Data scadenza Patente" required :value="datascadenza"></b-form-datepicker>
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-5" >
-              <b-form-input type="text" v-model="auto"  name="auto" id="auto" placeholder="Modello automobile" required value="{{auto}}"></b-form-input>
+              <b-form-input type="text" v-model="auto"  name="auto" id="auto" placeholder="Modello automobile" required :value="auto"></b-form-input>
             </div>
             <div class="col-5">
-              <b-form-input type="text" v-model="targa"  name="targa" id="targa" placeholder="Targa automobile" required value="{{targa}}"></b-form-input>
+              <b-form-input type="text" v-model="targa"  name="targa" id="targa" placeholder="Targa automobile" required :value="targa"></b-form-input>
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-2">
-              <b-form-input type="number" v-model="nposti" min="1" name="nposti" id="nposti" placeholder="N.posti:" required value="{{nposti}}"></b-form-input>
+              <b-form-input type="number" v-model="nposti" min="1" name="nposti" id="nposti" placeholder="N.posti:" required :value="nposti"></b-form-input>
             </div>
             <div class="col-2" >
               <label>Servizi Extra: </label>
@@ -39,7 +39,7 @@
               <b-form-checkbox
                 id="bagagliaio"
                 name="bagagliaio"
-                value="{{bagagliaio}}"
+                :value="bagagliaio"
                 v-model="bagagliaio"
                 unchecked-value="false"
               > Bagagliaio </b-form-checkbox>
@@ -49,7 +49,7 @@
               <b-form-checkbox
                 id="seggiolino"
                 name="seggiolino"
-                value="{{seggiolino}}"
+                :value="seggiolino"
                 v-model="seggiolino"
                 unchecked-value="false"
               > Seggiolino </b-form-checkbox>
