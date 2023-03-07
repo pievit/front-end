@@ -103,7 +103,7 @@ export default {
     this.nposti = info[9]
     this.seggiolino =  ((info[10] == true) ? 1 : 0)
     this.bagagliaio = ((info[11] == true) ? 1 : 0)
-    console.log(info)
+    console.log(this.datascadenza+" -- "+this.seggiolino+" -- "+this.bagagliaio)
   },
 
   data: function(){
