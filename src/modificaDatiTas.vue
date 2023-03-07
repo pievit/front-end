@@ -96,7 +96,7 @@ export default {
     var i2 = info2[1].split(",")
 
     var info = i1.concat(i2)
-
+    console.log(info)
     this.npatente = info[3]
     this.datascadenza = info[4]
     this.targa = info[5]
