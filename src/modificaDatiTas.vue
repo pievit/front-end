@@ -100,7 +100,9 @@ export default {
   },
   methods: {
     salvaDatiTas(){
-      console.log(this.infoTas)
+      // console.log(this.infoTas[0])
+      var info = this.infoTas.split(",")
+      console.log(info[0])
     }
   }
 
