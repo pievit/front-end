@@ -89,13 +89,14 @@
 export default {
   name: "modificaDatiTas",
   mounted(){
-    this.npatente = this.infoTas.split(",")[4]
-    this.datascadenza = this.infoTas.split(",")[5]
-    this.targa = this.infoTas.split(",")[6]
-    this.auto = this.infoTas.split(",")[7]
-    this.nposti = this.infoTas.split(",")[8]
-    this.seggiolino = this.infoTas.split(",")[9]
-    this.bagagliaio = this.infoTas.split(",")[10]
+    var info = this.infoTas.split(",")
+    this.npatente = info[4]
+    this.datascadenza = info[5]
+    this.targa = info[6]
+    this.auto = info[7]
+    this.nposti = info[8]
+    this.seggiolino = info[9]
+    this.bagagliaio = info[10]
   },
   data: function(){
     return {
