@@ -85,7 +85,6 @@
 </template>
 
 <script>
-
 export default {
   name: "modificaDatiTas",
   mounted(){
@@ -96,7 +95,7 @@ export default {
     var i2 = info2[1].split(",")
 
     var info = i1.concat(i2)
-    console.log(info)
+
     this.npatente = info[3]
     this.datascadenza = info[4].replace("/","-")
     this.targa = info[7]
@@ -104,7 +103,9 @@ export default {
     this.nposti = info[9]
     this.seggiolino =  ((info[10] == true) ? 1 : 0)
     this.bagagliaio = ((info[11] == true) ? 1 : 0)
+    console.log(info)
   },
+
   data: function(){
     return {
       infoTas: this.$route.params.infoTas,
@@ -126,6 +127,7 @@ export default {
   }
 
 };
+
 </script>
 
 <style scoped>
