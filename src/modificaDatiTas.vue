@@ -98,12 +98,12 @@ export default {
     var info = i1.concat(i2)
     console.log(info)
     this.npatente = info[3]
-    this.datascadenza = info[4]
+    this.datascadenza = info[4].replace("/","-")
     this.targa = info[7]
     this.auto = info[8]
     this.nposti = info[9]
-    this.seggiolino = info[10]
-    this.bagagliaio = info[11]
+    this.seggiolino =  ((info[10] == true) ? 1 : 0)
+    this.bagagliaio = ((info[11] == true) ? 1 : 0)
   },
   data: function(){
     return {
