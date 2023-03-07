@@ -99,11 +99,11 @@ export default {
     console.log(info)
     this.npatente = info[3]
     this.datascadenza = info[4]
-    this.targa = info[5]
-    this.auto = info[6]
-    this.nposti = info[7]
-    this.seggiolino = info[8]
-    this.bagagliaio = info[9]
+    this.targa = info[7]
+    this.auto = info[8]
+    this.nposti = info[9]
+    this.seggiolino = info[10]
+    this.bagagliaio = info[11]
   },
   data: function(){
     return {
