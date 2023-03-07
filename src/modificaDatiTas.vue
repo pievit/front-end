@@ -85,6 +85,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "modificaDatiTas",
   mounted(){
@@ -96,6 +98,9 @@ export default {
 
     var info = i1.concat(i2)
 
+    this.email = info[0]
+    this.nome = info[1]
+    this.cognome = info[2]
     this.npatente = info[3]
     this.datascadenza = new Date(info[4].replaceAll("/","-"))
     this.targa = info[7]
@@ -120,9 +125,9 @@ export default {
   },
   methods: {
     salvaDatiTas(){
-      // console.log(this.infoTas[0])
-      var info = this.infoTas.split(",")
-      console.log(info[0])
+      var tassista = {email: this.email, nome: this.nome, cognome: this.cognome, npatente: this.npatente, datascadenza: this.datascadenza};
+      var auto = {targa: this.targa, descrizione: this.auto, nposti: this.nposti, bagagliaio: this.bagagliaio, seggiolino: this.seggiolino, tassista: tassista};
+      axios.post("/api/utenti/salvaDatiTas", { tassista: tassista,automobie: auto }).then(response => console.log(response))
     }
   }
 
