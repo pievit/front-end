@@ -21,16 +21,16 @@
           <br>
           <div class="row">
             <div class="col-5" >
-              <b-form-input type="text" v-model="auto"  name="auto" id="auto" placeholder="Modello automobile" required :value="auto"></b-form-input>
+              <b-form-input  v-model="auto"  name="auto" id="auto" placeholder="Modello automobile" required :value="auto"></b-form-input>
             </div>
             <div class="col-5">
-              <b-form-input type="text" v-model="targa"  name="targa" id="targa" placeholder="Targa automobile" required :value="targa"></b-form-input>
+              <b-form-input  v-model="targa"  name="targa" id="targa" placeholder="Targa automobile" required :value="targa"></b-form-input>
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-2">
-              <b-form-input type="number" v-model="nposti" min="1" name="nposti" id="nposti" placeholder="N.posti:" required :value="nposti"></b-form-input>
+              <b-form-input  v-model="nposti" min="1" name="nposti" id="nposti" placeholder="N.posti:" required :value="nposti"></b-form-input>
             </div>
             <div class="col-2" >
               <label>Servizi Extra: </label>
