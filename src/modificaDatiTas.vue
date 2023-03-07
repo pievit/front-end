@@ -101,13 +101,13 @@ export default {
   data: function(){
     return {
       infoTas: this.$route.params.infoTas,
-      // npatente: this.infoTas.split(",")[4],
-      // datascadenza: this.infoTas.split(",")[5],
-      // targa: this.infoTas.split(",")[6],
-      // nposti: this.infoTas.split(",")[8],
-      // auto: this.infoTas.split(",")[7],
-      // seggiolino: this.infoTas.split(",")[9],
-      // bagagliaio: this.infoTas.split(",")[10],
+      npatente: "",
+      datascadenza: "",
+      targa: "",
+      nposti: "",
+      auto: "",
+      seggiolino: "",
+      bagagliaio: "",
     }
   },
   methods: {
