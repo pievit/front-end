@@ -86,6 +86,7 @@
 
 <script>
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export default {
   name: "modificaDatiTas",
@@ -129,9 +130,17 @@ export default {
       var auto = {targa: this.targa, descrizione: this.auto, nPosti: this.nposti, bagagliaio: this.bagagliaio, seggiolino: this.seggiolino, tassista: tassista};
       axios.post("/api/utenti/salvaDatiTas", { tassista: tassista,automobile: auto })
         // eslint-disable-next-line no-unused-vars
-        .then(response => alert("Dati salvati correttamente"))
+        .then(response => Swal.fire({
+          title: "Ottimo!",
+          text: "Dati salvati correttamente",
+          type: "success"
+        }))
         .catch(error => {
-          this.$alert(error,"Errore nel salvataggio dei dati","warning")
+          Swal.fire({
+            title: "Errore!",
+            text: error,
+            type: "warning"
+          })
         })
     }
   }

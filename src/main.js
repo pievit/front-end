@@ -6,14 +6,14 @@ import Vue from "vue";
 
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
-import VueSimpleAlert from "vue-simple-alert";
 
+import 'sweetalert2/src/sweetalert2.scss'
+// const Swal = require('sweetalert2')
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import { BCard } from "bootstrap-vue";
 Vue.component("b-card", BCard);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
-Vue.use(VueSimpleAlert);
 
 new Vue({
   router,
