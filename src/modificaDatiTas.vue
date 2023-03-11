@@ -128,9 +128,9 @@ export default {
       var tassista = {email: this.email, nome: this.nome, cognome: this.cognome, nPatente: this.npatente, scadenza: this.datascadenza};
       var auto = {targa: this.targa, descrizione: this.auto, nPosti: this.nposti, bagagliaio: this.bagagliaio, seggiolino: this.seggiolino, tassista: tassista};
       axios.post("/api/utenti/salvaDatiTas", { tassista: tassista,automobile: auto })
-        .then(response => console.log(response))
+        .then(response => this.$alert("Dati salvati corrrettamente","Ottimo","success"))
         .catch(error => {
-          console.error("errore: ",error)
+          this.$alert(error,"Errore nel salvataggio dei dati","warning")
         })
     }
   }
