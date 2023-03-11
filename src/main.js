@@ -7,12 +7,12 @@ import Vue from "vue";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-import Simplert from 'vue2-simplert'
+import Simplert from "vue2-simplert";
 
 import { BCard } from "bootstrap-vue";
 Vue.component("b-card", BCard);
 // eslint-disable-next-line vue/multi-word-component-names
-Vue.component("simplert", Simplert)
+Vue.component("Simplert", Simplert)
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 new Vue({
