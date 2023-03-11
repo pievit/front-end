@@ -15,7 +15,8 @@
     "sweetalert2": "^11.7.3",
     "vue": "^2.7.14",
     "vue-router": "^3.5.4",
-    "vue-simple-alert": "^1.1.1"
+    "vue-simple-alert": "^1.1.1",
+    "vue2-alert": "^0.0.8"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
@@ -28,6 +29,7 @@
     "expose-loader": "^1.0.3",
     "prettier": "^2.5.1",
     "terser": "^5.14.2",
-    "vite": "^3.0.2"
+    "vite": "^3.0.2",
+    "vue2-simplert": "^1.0.0"
   }
 }
