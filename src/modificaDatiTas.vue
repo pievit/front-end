@@ -108,7 +108,7 @@ export default {
     this.nposti = info[9]
     this.seggiolino =  info[10]
     this.bagagliaio = info[11]
-    console.log(this.datascadenza+" -- "+this.seggiolino+" -- "+this.bagagliaio)
+    // console.log(this.datascadenza+" -- "+this.seggiolino+" -- "+this.bagagliaio)
   },
 
   data: function(){
@@ -129,7 +129,7 @@ export default {
       var auto = {targa: this.targa, descrizione: this.auto, nPosti: this.nposti, bagagliaio: this.bagagliaio, seggiolino: this.seggiolino, tassista: tassista};
       axios.post("/api/utenti/salvaDatiTas", { tassista: tassista,automobile: auto })
         // eslint-disable-next-line no-unused-vars
-        .then(response => this.$alert("Dati salvati correttamente"))
+        .then(response => alert("Dati salvati correttamente"))
         .catch(error => {
           this.$alert(error,"Errore nel salvataggio dei dati","warning")
         })
