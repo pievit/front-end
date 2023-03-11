@@ -128,7 +128,8 @@ export default {
       var tassista = {email: this.email, nome: this.nome, cognome: this.cognome, nPatente: this.npatente, scadenza: this.datascadenza};
       var auto = {targa: this.targa, descrizione: this.auto, nPosti: this.nposti, bagagliaio: this.bagagliaio, seggiolino: this.seggiolino, tassista: tassista};
       axios.post("/api/utenti/salvaDatiTas", { tassista: tassista,automobile: auto })
-        .then(response => this.$alert("Dati salvati corrrettamente","Ottimo","success"))
+        // eslint-disable-next-line no-unused-vars
+        .then(response => this.$alert("Dati salvati correttamente"))
         .catch(error => {
           this.$alert(error,"Errore nel salvataggio dei dati","warning")
         })
