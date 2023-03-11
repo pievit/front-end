@@ -139,7 +139,13 @@ export default {
           // this.$alert("Dati salvati correttamente", "Ottimo", "success")
         })
         .catch(error => {
-          this.$alert(error,"Errore nel salvataggio dei dati","warning")
+          let obj = {
+            title: "Errore",
+            message: error,
+            type: "info",
+          };
+          this.$refs.simplert.openSimplert(obj)
+          // this.$alert(error,"Errore nel salvataggio dei dati","warning")
         })
     }
   }
