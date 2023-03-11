@@ -1,5 +1,9 @@
 <template>
   <div class="container-sm">
+    <simplert :useRadius="true"
+              :useIcon="true"
+              ref="simplert">
+    </simplert>
     <div class="row" align="center">
       <b-jumbotron
         header="Modifica Dati"

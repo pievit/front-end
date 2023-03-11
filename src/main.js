@@ -11,9 +11,10 @@ import Simplert from 'vue2-simplert'
 
 import { BCard } from "bootstrap-vue";
 Vue.component("b-card", BCard);
+// eslint-disable-next-line vue/multi-word-component-names
+Vue.component("simplert", Simplert)
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
-Vue.use(Simplert);
 new Vue({
   router,
   render: (h) => h(App),
