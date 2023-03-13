@@ -24,7 +24,9 @@
             <option value="dom">domenica</option>
           </select>
         </div>
-        <div class="col-10" id="divcheck"></div>
+        <form action="" method="post" align="center">
+          <div class="col-10" id="divcheck"></div>
+        </form>
       </div>
     </div>
     <br />
@@ -45,7 +47,7 @@ export default {
       var label = document.createElement("label");
       label.setAttribute("for", i + "");
       var o1, o2;
-      if (i % 2 == 0) {
+      if (i % 2 === 0) {
         o1 = i / 2;
         o2 = ":00";
       } else {
@@ -54,12 +56,11 @@ export default {
       }
       label.setAttribute("innerHTML", o1 + o2);
       divcheck.append(label);
-      if (i % 4 == 0) {
+      if (i % 4 === 0) {
         var br = document.createElement("br");
         checkbox.append(br);
       }
     }
-    document.getElementById("divcheck").load("#divcheck");
   },
   methods: {
     // eslint-disable-next-line no-unused-vars
