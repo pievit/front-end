@@ -31,8 +31,7 @@
 <script>
 export default {
   name: "modificaDisp",
-  mounted: {
-    creaCheck(){
+  mounted() {
       var divcheck = document.getElementById("divcheck");
       for(var i=0;i<48;i++){
        var checkbox = document.createElement("b-form-checkbox")
@@ -55,7 +54,7 @@ export default {
         if(i%4==0){
           var br = document.createElement("br")
           checkbox.appendChild(br)
-        }
+
        }
     }
   },
