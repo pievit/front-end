@@ -53,11 +53,11 @@ export default {
         o1 = (i - 1) / 2;
         o2 = ":30";
       }
-      label.setAttribute("innerHTML", o1 + o2);
+      label.innerHTML = o1 + o2;
       divcheck.append(label);
-      if (i % 4 === 0) {
+      if (i % 12 === 0 && i !== 0) {
         var br = document.createElement("br");
-        checkbox.append(br);
+        divcheck.append(br);
       }
     }
   },
