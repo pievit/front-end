@@ -11,7 +11,7 @@
       <hr />
       <div class="container-sm">
         <div class="row">
-          <div class="col">
+          <div class="col-7" style="padding-left: 40%;">
             <select
               id="giorno"
               @change="caricaDispGiorno($event)"
@@ -75,6 +75,7 @@ export default {
       divcheck.append(label);
       if ((i + 1) % 12 === 0 && i !== 0) {
         var br = document.createElement("br");
+        divcheck.append(br);
         divcheck.append(br);
       }
     }
