@@ -93,11 +93,12 @@
 </simplert>
 <script>
 import axios from "axios";
-import { Simplert } from "vue2-simplert";
+import Simplert from "vue2-simplert";
+
 
 export default {
   name: "modificaDatiTas",
-  components: {Simplert},
+  components: {Simplert} ,
   mounted(){
     var info1 = this.infoTas.split("{")
     var info2 = info1[1].toString().split("}")
