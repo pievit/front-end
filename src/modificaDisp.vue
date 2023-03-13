@@ -11,6 +11,7 @@
       <hr />
       <div class="container-sm">
         <div class="row">
+          <div class="col">
             <select
               id="giorno"
               @change="caricaDispGiorno($event)"
@@ -24,6 +25,7 @@
               <option value="sab">sabato</option>
               <option value="dom">domenica</option>
             </select>
+          </div>
         </div>
         <br><br>
         <div class="row">
