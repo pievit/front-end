@@ -55,7 +55,7 @@ export default {
       }
       label.innerHTML = o1 + o2;
       divcheck.append(label);
-      if (i+1 % 12 === 0 && i !== 0) {
+      if ((i + 1) % 12 === 0 && i !== 0) {
         var br = document.createElement("br");
         divcheck.append(br);
       }
