@@ -1,9 +1,5 @@
 <template>
   <div class="container-sm">
-    <simplert :useRadius="true"
-              :useIcon="true"
-              ref="simplert">
-    </simplert>
     <div class="row" align="center">
       <b-jumbotron
         header="Modifica Dati"
@@ -87,18 +83,12 @@
     </div>
   </div>
 </template>
-<simplert :useRadius="true"
-          :useIcon="true"
-          ref="simplert">
-</simplert>
 <script>
 import axios from "axios";
-import Simplert from "vue2-simplert";
 
 
 export default {
   name: "modificaDatiTas",
-  components: {Simplert} ,
   mounted(){
     var info1 = this.infoTas.split("{")
     var info2 = info1[1].toString().split("}")
@@ -157,22 +147,10 @@ export default {
         })
         // eslint-disable-next-line no-unused-vars
         .then(response => {
-          let obj = {
-            title: "Ottimo",
-            message: response.data.toString(),
-            type: "info",
-          };
-          this.$refs.simplert.openSimplert(obj)
-          // this.$alert("Dati salvati correttamente", "Ottimo", "success")
+          alert("Dati salvati correttamente.")
         })
         .catch(error => {
-          let obj = {
-            title: "Errore",
-            message: error,
-            type: "info",
-          };
-          this.$refs.simplert.openSimplert(obj)
-          // this.$alert(error,"Errore nel salvataggio dei dati","warning")
+         alert("Errore: "+error)
         })
     }
   }
