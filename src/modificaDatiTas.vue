@@ -87,12 +87,17 @@
     </div>
   </div>
 </template>
-
+<simplert :useRadius="true"
+          :useIcon="true"
+          ref="simplert">
+</simplert>
 <script>
 import axios from "axios";
+import { Simplert } from "vue2-simplert";
 
 export default {
   name: "modificaDatiTas",
+  components: {Simplert},
   mounted(){
     var info1 = this.infoTas.split("{")
     var info2 = info1[1].toString().split("}")
