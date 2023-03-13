@@ -56,13 +56,9 @@
             </div>
 
             <div class="col-2">
-              <router-link
-                to="/modificaDisp"
-                custom
-                v-slot="{ changeDisp }"
-              >
-              <b-btn variant="outline-primary" type="button" role="link" @click="changeDisp">Modifica Disponibilità</b-btn>
-              </router-link>
+
+              <b-btn variant="outline-primary" type="button" to="\modificaDisp">Modifica Disponibilità</b-btn>
+
             </div>
           </div>
           <br>
@@ -108,7 +104,6 @@ export default {
     this.nposti = info[9]
     this.seggiolino =  info[10]
     this.bagagliaio = info[11]
-    console.log(this.datascadenza+" -- "+this.seggiolino+" -- "+this.bagagliaio)
   },
 
   data: function(){
