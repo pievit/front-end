@@ -57,7 +57,7 @@
 
             <div class="col-2">
 
-              <b-btn variant="outline-primary" type="button" to="\modificaDisp">Modifica Disponibilità</b-btn>
+              <b-btn variant="outline-primary" type="button" to="/modificaDisp">Modifica Disponibilità</b-btn>
 
             </div>
           </div>
