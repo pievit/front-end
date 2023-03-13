@@ -24,9 +24,7 @@
             <option value="dom">domenica</option>
           </select>
         </div>
-        <form action="" method="post" align="center">
-          <div class="col-10" id="divcheck"></div>
-        </form>
+        <div class="col-10" id="divcheck"></div>
       </div>
     </div>
     <br />
@@ -39,9 +37,10 @@ export default {
   mounted() {
     var divcheck = document.getElementById("divcheck");
     for (var i = 0; i < 48; i++) {
-      var checkbox = document.createElement("b-form-checkbox");
-      checkbox.setAttribute("value", "true");
-      checkbox.setAttribute("unchecked-value", "false");
+      var checkbox = document.createElement("input");
+      checkbox.setAttribute("type", "checkbox");
+      // checkbox.setAttribute("value", "true");
+      // checkbox.setAttribute("unchecked-value", "false");
       checkbox.setAttribute("id", i + "");
       divcheck.append(checkbox);
       var label = document.createElement("label");
