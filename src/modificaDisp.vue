@@ -5,13 +5,12 @@
       header="Modifica Disponibilità"
       bg-variant="light"
       border-variant="dark"
-      lead="Selezione le fascie orarie in cui sei disponibile"
+      lead="Seleziona le fascie orarie in cui sei disponibile"
       rounded
     >
       <hr />
       <div class="container-sm">
         <div class="row">
-          <div class="col-2">
             <select
               id="giorno"
               @change="caricaDispGiorno($event)"
@@ -25,8 +24,19 @@
               <option value="sab">sabato</option>
               <option value="dom">domenica</option>
             </select>
+        </div>
+        <br><br>
+        <div class="row">
+          <div id="divcheck"></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <b-btn variant="info" @click="salvaDispGiorno">Salva disponibilità</b-btn>
           </div>
-          <div class="col-10" id="divcheck"></div>
+          <div class="col">
+            <b-btn variant="primary" to="/homeTassista">Home</b-btn>
+          </div>
         </div>
       </div>
       <br />
@@ -59,7 +69,7 @@ export default {
       }
       if(o1<10)
         o1 = "0"+o1
-      label.innerHTML = o1 + o2;
+      label.innerHTML = "&nbsp"+o1 + o2+"&nbsp";
       divcheck.append(label);
       if ((i + 1) % 12 === 0 && i !== 0) {
         var br = document.createElement("br");
@@ -70,6 +80,9 @@ export default {
   methods: {
     // eslint-disable-next-line no-unused-vars
     caricaDispGiorno(e) {},
+    salvaDispGiorno(){
+
+    }
   },
 };
 </script>
