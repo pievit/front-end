@@ -117,7 +117,24 @@ export default {
       }
     },
     salvaDispGiorno(){
-
+      var giorno = document.getElementById("giorno").value
+      var disp = Array()
+      for(var i=0;i<47;i++){
+        if(document.getElementById(i).checked == true){
+          disp.push(i)
+        }
+      }
+      if(this.disp[giorno]){
+        this.disp[giorno] = disp
+      }else{
+        this.disp[giorno].push(disp)
+      }
+      // eslint-disable-next-line no-unused-vars
+      axios.put("/api/utenti/disponibilita",{disp :this.disp}).then(res => {
+        alert("Disponibilità di "+giorno+ " salvata correttamente.")
+      }).catch(error => {
+        console.log(error)
+      })
     }
   },
 };
