@@ -14,7 +14,7 @@
           <div class="col-7" style="padding-left: 40%;">
             <select
               id="giorno"
-              @change="caricaDispGiorno($event)"
+              @change="caricaDispGiorno($event.target.value)"
               class="form-control"
             >
               <option value="lunedi">lunedi</option>
