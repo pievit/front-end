@@ -85,11 +85,14 @@ export default {
     axios.get("/api/utenti/getDispTassista/"+this.email).then(res => {
         try{
           console.log(res.data)
-          this.disp = JSON.parse(res.data.toString())
-          this.caricaDispGiorno("lunedi")
+          this.disp = res.data
+          if(this.disp[0]!="N"){
+          this.caricaDispGiorno("lunedi");
+          }else{
+            alert("Nessuna disponibilità ancora inserita.")
+          }
         }catch(ExceptionVar){
           console.log(ExceptionVar)
-          alert(res.data.toString())
       }
     })
   },
