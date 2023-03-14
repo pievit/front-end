@@ -17,13 +17,13 @@
               @change="caricaDispGiorno($event)"
               class="form-control"
             >
-              <option value="lun">lunedi</option>
-              <option value="mar">martedi</option>
-              <option value="mer">mercoledi</option>
-              <option value="gio">giovedi</option>
-              <option value="ven">venerdi</option>
-              <option value="sab">sabato</option>
-              <option value="dom">domenica</option>
+              <option value="lunedi">lunedi</option>
+              <option value="martedi">martedi</option>
+              <option value="mercoledi">mercoledi</option>
+              <option value="giovedi">giovedi</option>
+              <option value="venerdi">venerdi</option>
+              <option value="sabato">sabato</option>
+              <option value="domenica">domenica</option>
             </select>
           </div>
         </div>
@@ -84,9 +84,11 @@ export default {
 
     axios.get("/api/utenti/getDispTassista/"+this.email).then(res => {
         try{
+          console.log(res.data)
           this.disp = JSON.parse(res.data.toString())
-          this.caricaDispGiorno("lun")
+          this.caricaDispGiorno("lunedi")
         }catch(ExceptionVar){
+          console.log(ExceptionVar)
           alert(res.data.toString())
       }
     })
