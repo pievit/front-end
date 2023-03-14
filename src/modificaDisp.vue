@@ -124,11 +124,7 @@ export default {
           disp.push(i)
         }
       }
-      if(this.disp[giorno]){
-        this.disp[giorno] = disp
-      }else{
-        this.disp[giorno].push(disp)
-      }
+      this.disp[giorno] = disp
       // eslint-disable-next-line no-unused-vars
       axios.put("/api/utenti/disponibilita",{disp :this.disp}).then(res => {
         alert("Disponibilità di "+giorno+ " salvata correttamente.")
