@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "modificaDisp",
   mounted() {
@@ -79,10 +81,36 @@ export default {
         divcheck.append(br);
       }
     }
+
+    axios.post("/api/utenti/getDispTassista/"+this.email).then(res => {
+        try{
+          this.disp = JSON.parse(res.data.toString())
+          this.caricaDispGiorno("lun")
+        }catch(ExceptionVar){
+          alert(res.data.toString())
+      }
+    })
+  },
+  data: function(){
+    return {
+      email: this.$route.params.email
+    }
   },
   methods: {
     // eslint-disable-next-line no-unused-vars
-    caricaDispGiorno(e) {},
+    caricaDispGiorno(giorno) {
+      var j = 0
+      for(var i=0;i<48;i++){
+        var checkbox = document.getElementById(i)
+        var vetgiorno = this.disp[giorno]
+        if(vetgiorno.length!=0 && vetgiorno.length>j && vetgiorno[j]==i){
+          checkbox.checked = true
+          j++
+        }else{
+          checkbox.checked = false
+        }
+      }
+    },
     salvaDispGiorno(){
 
     }
