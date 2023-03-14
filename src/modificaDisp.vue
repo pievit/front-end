@@ -108,7 +108,7 @@ export default {
       for(var i=0;i<48;i++){
         var checkbox = document.getElementById(i)
         var vetgiorno = this.disp[giorno]
-        if(vetgiorno.length!=0 && vetgiorno.length>j && vetgiorno[j]==i){
+        if(vetgiorno && vetgiorno.length>j && vetgiorno[j]==i){
           checkbox.checked = true
           j++
         }else{
