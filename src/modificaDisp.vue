@@ -82,7 +82,7 @@ export default {
       }
     }
 
-    axios.post("/api/utenti/getDispTassista/"+this.email).then(res => {
+    axios.get("/api/utenti/getDispTassista/"+this.email).then(res => {
         try{
           this.disp = JSON.parse(res.data.toString())
           this.caricaDispGiorno("lun")
