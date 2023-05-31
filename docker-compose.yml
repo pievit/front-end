@@ -1,0 +1,13 @@
+version: '1'
+
+services:
+  front-end:
+    image: pievit/front-end
+    network_mode: bridge
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+    container_name: front-end
+    ports:
+      - "8083:8080"
