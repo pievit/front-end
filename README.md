@@ -2,6 +2,10 @@
 
 DOCKER
 
+**installazione vite per vue**
+sudo npm install -g
+sudo npm i
+
 docker compose up --build --force-recreate
 
 
